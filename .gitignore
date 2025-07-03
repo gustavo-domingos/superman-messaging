@@ -1,0 +1,47 @@
+# Arquivo para ignorar segredos e arquivos de ambiente
+# NUNCA versione este arquivo com suas senhas!
+.env
+
+# Arquivos de Log
+*.log
+
+# Arquivos gerados pelo sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos e pastas de IDEs
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.settings/
+.classpath
+nbproject/
+
+### REGRAS PARA O BACKEND (JAVA/MAVEN) ###
+# Pasta de build do Maven
+/superman-messaging-api/target/
+
+# Arquivos de log do Spring Boot
+/superman-messaging-api/*.log
+
+
+### REGRAS PARA O FRONTEND (NODE/REACT) ###
+# Pasta de dependências do Node
+/superman-messaging-ui/node_modules/
+
+# Pasta de build do React
+/superman-messaging-ui/build/
+
+# Logs do NPM e Yarn
+/superman-messaging-ui/npm-debug.log*
+/superman-messaging-ui/yarn-debug.log*
+/superman-messaging-ui/yarn-error.log*
+
+# Arquivos de ambiente local do frontend
+/superman-messaging-ui/.env.local
+/superman-messaging-ui/.env.development.local
+/superman-messaging-ui/.env.test.local
+/superman-messaging-ui/.env.production.local

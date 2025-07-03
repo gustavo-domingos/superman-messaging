@@ -1,0 +1,17 @@
+services:
+  backend:
+    build: ./superman-messaging-api
+    container_name: superman-api
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_MAIL_USERNAME=${SPRING_MAIL_USERNAME}
+      - SPRING_MAIL_PASSWORD=${SPRING_MAIL_PASSWORD}
+
+  frontend:
+    build: ./superman-messaging-ui
+    container_name: superman-ui
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
